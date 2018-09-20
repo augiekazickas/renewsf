@@ -1,0 +1,44 @@
+
+html
+{
+  height:100%;  
+}
+body{    
+  /*background:url('images/jurassic-coast-1406284_1920.jpg') no-repeat;*/
+  background-color: #f4f4f4;
+  background-size: cover;
+  height:100%;
+  width:100%;
+
+}
+
+
+.form-top{
+	 margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.panel{
+	/*box-shadow: 0 1px 6px 0 rgba(0,0,0,.12), 0 1px 6px 0 rgba(0,0,0,.12);*/
+	border-radius: 10px;
+    border: 0;
+  background-color: #f4f4f4;
+}
+@-moz-document url-prefix() {
+    .form-control{
+    	height: auto;
+    }
+}
+
+
+.headline {
+  font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    padding-top: 30px;
+    color: #706b6b;
+    text-align: center;
+}
+
