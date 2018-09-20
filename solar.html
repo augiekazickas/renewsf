@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solar Panel Savings</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/map.js"></script>
+        <link rel="stylesheet" href="css/style.css?v=1.0">
+        <link rel="stylesheet" href="css/slider.css?v=1.0">
+</head>
+<body>
+   <header>
+        <ul>
+          <li><a href="index.html" style="color:#706b6b;">Contact Us</a></li>
+          <li><a href="default.asp" style="color:#706b6b;">Solar Savings</a></li>
+          <li><a href="index.html"><img src="img/logo.png"></a></li>
+        </ul>
+    </header>
+    <section>
+            <div id="map"></div>
+            <input id="searchInput" class="controls" type="text" placeholder="Enter a location">
+    </section>
+  <div id="mapContainer">
+    <h1 id="savings">Estimated Savings:</h1>
+    <p class="estimate">total based on net savings of 20 years</p>
+    <section id="scale">
+    <div id="wrapper">
+     <div id="left">
+        <p id="price">What's your average monthly electric bill?</p>
+        <p id="price2">$250</p>
+        <div style="margin-top: 1em">
+        $0<input id="slider" type="range" min="0" max="500" value="250" step="50" />$500
+        </div>
+
+     </div>
+     <div id="right">
+        <p id="size2">Your recommended solar array size</p>
+        <p id="size">6.75kw</p>
+        <p id="panels">(Around 20-24 panels)</p>
+     </div>
+     <div class="button" style="margin-top:50px">
+          <a href="contactEmail/formpage.html">Get a Quote</a>
+      </div>
+
+    </div><!-- Wrapper -->
+
+
+
+    </section>
+  </div>
+           
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap" async defer></script>
+<script>
+
+
+    var slider = document.getElementById("slider"),
+    price = document.getElementById("price2");
+
+slider.addEventListener("input", function() {
+    price.innerHTML = "$" + (slider.value);
+
+    if (slider.value == 0){
+      size.innerHTML = "0kw";
+      panels.innerHTML = "Zero panels";
+      savings.innerHTML = "Estimated Savings: " + "$0";
+    }
+
+    if (slider.value == 50){
+      size.innerHTML = "2kw";
+      panels.innerHTML = "(5-8 panels)";
+      savings.innerHTML = "Estimated Savings: " + "$4000";
+
+    } if (slider.value == 100) {
+      size.innerHTML = "3.5kw";
+      panels.innerHTML = "(10-13 panels)";
+      savings.innerHTML = "Estimated Savings: " + "$16,000";
+    }
+
+    if (slider.value == 150) {
+      size.innerHTML = "4.75kw";
+      panels.innerHTML = "(13-16 panels)";
+      savings.innerHTML = "Estimated Savings: " + "$28,000";
+    }
+
+    if (slider.value == 200) {
+      size.innerHTML = "5.75kw";
+      panels.innerHTML = "(16-19 panels)";
+      savings.innerHTML = "Estimated Savings: " + "$40,000";
+    }
+
+    if (slider.value == 250) {
+      size.innerHTML = "6.75kw";
+      panels.innerHTML = "(20-24 panels)";
+      savings.innerHTML = "Estimated Savings: " + "$51,000";
+    }
+
+    if (slider.value == 300) {
+      size.innerHTML = "8kw";
+      panels.innerHTML = "(23-28 panels)";
+      savings.innerHTML = "Estimated Savings: " + "$51,000+";
+    }
+
+    if (slider.value == 350) {
+      size.innerHTML = "9kw";
+      panels.innerHTML = "(30+ panels)";
+      savings.innerHTML = "Estimated Savings: " + "$51,000+";
+    }
+
+    if (slider.value == 400) {
+      size.innerHTML = "10kw";
+      savings.innerHTML = "Estimated Savings: " + "$51,000+";
+    }
+
+    if (slider.value == 450) {
+      size.innerHTML = "11.25kw";
+      savings.innerHTML = "Estimated Savings: " + "$51,000+";
+    }
+
+    if (slider.value == 500) {
+      size.innerHTML = "12.25kw";
+      savings.innerHTML = "Estimated Savings: " + "$51,000+";
+    }
+
+
+}, false);
+
+
+  </script>
+</body>
+</html>
